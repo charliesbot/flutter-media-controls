@@ -75,6 +75,7 @@ AnimatedOpacity(
 ```
 
 ### Play / Pause Button
+#### Solution 1 (**Preferred**)
 We can use an IconButton to render this button, which support full customization
 
 For the icons, we can use: 
@@ -96,6 +97,20 @@ Container(
         )
     ),
 ```
+#### Solution 2
+We can create our own CustomButton
+```dart
+InkWell(
+    height: 100,
+    width: 100,
+    child: Container(
+      child: Icon(
+        icon: const Icon(Icons.play_arrow),
+      )
+    )
+  ),
+```
+We decided to not continue with this approach because it means supporting our own implementation when there's already an IconButton that does exactly what we are looking for
 
 ### Slider
 [Use Flutter Native Slider](https://api.flutter.dev/flutter/material/Slider-class.html)
